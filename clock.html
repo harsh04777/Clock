@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>digital clock</title>
+      <link rel="stylesheet"  href="clock.css">
+  </head>
+  <body>
+  	<header id="main"><h1>ANALOG CLOCK<h1>
+  		<p><h3>A small designed analog clock using the tech stack - html , css and javascript.<h3></p>
+  	</header>
+<div class= "hero">
+	<div class ="container">
+		<div class="clock">
+			
+			<span id="hrs">00</span>
+			<span>:</span>
+			<span id="min">00</span>
+			<span>:</span>
+			<span id="sec">00</span>
+
+		</div>
+	</div>
+</div>
+<script>
+let hrs =document.getElementById("hrs");
+let min =document.getElementById("min");
+let sec =document.getElementById("sec");
+setInterval(()=>{
+	let currentTime= new Date();
+
+hrs.innerHTML = currentTime.getHours();
+min.innerHTML = currentTime.getMinutes();
+sec.innerHTML = currentTime.getSeconds();
+
+},1000)
+
+</script>
+
+
+</div>
+</body>
+</html>
